@@ -4,48 +4,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>研究結果</title>
 
   <link rel="stylesheet" href="css/style.css">
-  <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    }
-  };
-</script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
+  <header class="page-header">
+    <h1>Einstein-Maxwell-Dilaton理論における<br>
+      数値相対論シミュレーション</h1>
 
-  <h1>Einstein-Maxwell-Dilaton理論における<br>
-    数値相対論シミュレーション</h1>
-
-  <p>
-    このページでは、研究集会で発表する数値シミュレーションの結果を掲載します。
-  </p>
-
-  <h2>計算結果</h2>
-
-  <p>
-    計算結果は現在準備中です。
-  </p>
-  <h3>画像の表示テスト</h3>
-    
-    <img src="images/test.png" alt="テスト画像" width="500">
-    <h2>数式の表示テスト</h2>
     <p>
-      Einstein方程式は
-      $G_{\mu\nu}=8\pi T_{\mu\nu}$
-      で与えられる。
+      このページでは、Einstein-Maxwell-Dilaton理論における
+      二つのブラックホールの合体シミュレーション結果を掲載します。
     </p>
-    $$
-    G_{\mu\nu}=8\pi T_{\mu\nu}
-    $$
-  </body>
+  </header>
+
+  <main>
+    <section>
+      <h2>計算結果</h2>
+
+      <p>
+        Dilaton結合定数を $a=1$ とした場合について、
+        中性の場合と、電荷の大きさが異なる場合を比較しました。
+        図中の灰色の破線は、時間をそろえる際に基準とした合体時刻を表します。
+      </p>
+    </section>
+
+    <section>
+      <h2>1. エネルギー放出</h2>
+
+      <h3>重力波と電磁場のエネルギー放出率</h3>
+
+      <div class="figure-grid figure-grid-2">
+        <figure>
+          <img src="images/flux_gw_a1.png"
+               alt="a=1における重力波のエネルギー放出率">
+          <figcaption>重力波のエネルギー放出率</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/flux_em_a1.png"
+               alt="a=1における電磁場のエネルギー放出率">
+          <figcaption>電磁場のエネルギー放出率</figcaption>
+        </figure>
+      </div>
+
+      <div class="result-box">
+        <h3>結果の読み取り</h3>
+        <p>
+          いずれの放出率も合体付近で最大となり、その後は急激に減少します。
+          また、高電荷の場合には合体前の軌道発展が変化するため、
+          重力波のエネルギー放出率にも差が現れています。
+        </p>
+        <p>
+          電磁場のエネルギー放出率は電荷への依存性が強く、
+          $|\lambda|=0.7$ の場合は $|\lambda|=0.05$ の場合よりも
+          大きな放出率を示しています。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. スカラー場のエネルギー放出</h2>
+
+      <figure class="figure-single figure-narrow">
+        <img src="images/flux_phi_a1.png"
+             alt="a=1におけるスカラー場のエネルギー放出率">
+        <figcaption>スカラー場のエネルギー放出率</figcaption>
+      </figure>
+
+      <div class="result-box">
+        <h3>結果の読み取り</h3>
+        <p>
+          $|\lambda|=0.05$ ではスカラー放射は非常に小さい一方、
+          $|\lambda|=0.7$ では合体付近で大きく増加しています。
+        </p>
+        <p>
+          電荷が大きい場合には、電磁場によってDilaton場が強く励起され、
+          スカラー放射が顕著になったと考えられます。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 重力波形 strain $h$</h2>
+
+      <figure class="figure-single">
+        <img src="images/waveform_hplus_a1.png"
+             alt="a=1における重力波strain hの比較">
+        <figcaption>$a=1$ における strain $h$</figcaption>
+      </figure>
+
+      <div class="result-box">
+        <h3>結果の読み取り</h3>
+        <p>
+          $|\lambda|=0.05$ の波形は中性の場合とほぼ一致しています。
+          一方、$|\lambda|=0.7$ では時間の経過とともに位相差が蓄積し、
+          合体時刻にも差が現れています。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Weyl scalar $\Psi_4$</h2>
+
+      <figure class="figure-single figure-narrow">
+        <img src="images/waveform_psi4_a1.png"
+             alt="a=1におけるWeyl scalar Psi4の比較">
+        <figcaption>合体付近における Weyl scalar $\Psi_4$</figcaption>
+      </figure>
+
+      <div class="result-box">
+        <h3>結果の読み取り</h3>
+        <p>
+          高電荷の場合には、合体前後のピーク位置と振幅に差が現れています。
+          これに対して、低電荷の場合の差は比較的小さいことが分かります。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>付録：$a=0$ の計算結果</h2>
+
+      <p>
+        比較のため、Dilaton結合を切った $a=0$ の結果も掲載します。
+      </p>
+
+      <h3>重力波形</h3>
+
+      <div class="figure-grid figure-grid-2">
+        <figure>
+          <img src="images/waveform_hplus_a0.png"
+               alt="a=0におけるstrain hの比較">
+          <figcaption>strain $h$</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/waveform_psi4_a0.png"
+               alt="a=0におけるWeyl scalar Psi4の比較">
+          <figcaption>Weyl scalar $\Psi_4$</figcaption>
+        </figure>
+      </div>
+
+      <div class="result-box">
+        <h3>結果の読み取り</h3>
+        <p>
+          $a=0$ の場合も、$|\lambda|=0$ と $|\lambda|=0.05$ の波形には
+          ほとんど違いが見られません。
+          一方、$|\lambda|=0.7$ では位相差が生じています。
+        </p>
+      </div>
+
+      <h3>エネルギー放出率</h3>
+
+      <div class="figure-grid figure-grid-2">
+        <figure>
+          <img src="images/flux_gw_a0.png"
+               alt="a=0における重力波のエネルギー放出率">
+          <figcaption>重力波のエネルギー放出率</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/flux_em_a0.png"
+               alt="a=0における電磁場のエネルギー放出率">
+          <figcaption>電磁場のエネルギー放出率</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Einstein-Maxwell-Dilaton理論における数値相対論シミュレーション</p>
+  </footer>
+</body>
 
 </html>
